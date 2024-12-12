@@ -55,3 +55,31 @@ function filterEvenNumbers(arr){
 
 let arr= [2,3,6,7,8,20,16];
 console.log(filterEvenNumbers(arr));
+
+//task 6
+
+function lowercaseFirstLetter(string){
+    const firstChar = string.charAt(0).toLowerCase();
+    const rep = string.replace(string.charAt(0),firstChar);
+    return rep;
+}
+const string3="BanglaDeSh";
+console.log(lowercaseFirstLetter(string3));
+
+////task 7
+
+function findAverage(avgarr){
+    let sum=0;
+    for(let i=0 ; i<avgarr.length ; i++){
+        sum = sum+avgarr[i];
+    }
+
+    const avg = sum/avgarr.length;
+    return Math.round(avg);
+
+
+}
+
+const array = [2,5,6,7,8,9];
+console.log(findAverage(array));
+    
