@@ -6,8 +6,6 @@ const calculateDifference =(x,y)=>{
 
 } 
   
-
-
 const result= calculateDifference(5,8);
 console.log("output" + " " + result);
 
@@ -56,6 +54,27 @@ function filterEvenNumbers(arr){
 let arr= [2,3,6,7,8,20,16];
 console.log(filterEvenNumbers(arr));
 
+
+
+//Task 5
+
+function sortArrayDescending(arr) {
+    let n = arr.length;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n - 1; j++) {
+            if (arr[j] < arr[j + 1]) {
+                // Swap elements if they are in the wrong order
+                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+            }
+        }
+    }
+    return arr;
+}
+
+const Numarr = [7, 8, 20, 45, 5, 6, 7, 2, 3];
+console.log(sortArrayDescending(Numarr));
+
+
 //task 6
 
 function lowercaseFirstLetter(string){
@@ -82,4 +101,27 @@ function findAverage(avgarr){
 
 const array = [2,5,6,7,8,9];
 console.log(findAverage(array));
+
+//Task 8
+
+function isLeapYear(year){
+
+    if(year % 4 == 0 && year % 100 !== 0 ){
+        return true;
+
+    }
+
+    if (year % 400 == 0){
+        return true;
+    }
+
+    else{
+        return false;
+    }
+        
+}
+
+const year=2023;
+console.log(isLeapYear(year));
     
+
